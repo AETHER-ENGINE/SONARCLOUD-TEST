@@ -1,0 +1,5 @@
+all:
+  hosts:
+    azure_machine:
+      ansible_host: 48.209.28.142
+      ansible_user: zoldik333
