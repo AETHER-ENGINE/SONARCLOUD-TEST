@@ -6,7 +6,7 @@ on:
       - workflow
 
 env:
-  MIRROR_URL: "git@github.com:AETHER-ENGINE/SONARCLOUD-TEST.git"
+  MIRROR_URL: "git@github.com:AETHER-ENGINE/DEVOPS-P.MORILHAT.git"
 
 jobs:
   push_to_mirror:
@@ -16,6 +16,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
+          ref: workflow
           fetch-depth: 0
 
       - name: Push to Target Repository
@@ -23,6 +24,4 @@ jobs:
         with:
           target_repo_url: ${{ env.MIRROR_URL }}
           ssh_private_key: ${{ secrets.GIT_SSH_PRIVATE_KEY }}
-          branches: |
-            ansible
-            workflow
+          branches: workflow
