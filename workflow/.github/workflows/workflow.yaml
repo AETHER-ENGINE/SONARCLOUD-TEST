@@ -6,7 +6,7 @@ on:
       - workflow
 
 env:
-  MIRROR_URL: "git@github.com:AETHER-ENGINE/SONARCLOUD-TEST.git"
+  MIRROR_URL: "https://github.com/AETHER-ENGINE/SONARCLOUD-TEST.git"
 
 jobs:
    push_to_mirror:     
